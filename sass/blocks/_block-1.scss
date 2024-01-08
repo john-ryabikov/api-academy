@@ -1,0 +1,333 @@
+.block-1 {
+    @include flex-column();
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    &__logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 86px;
+    }
+    &__content {
+        @include flex-column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    &__title-1 {
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #868686;
+    }
+    &__main-title {
+        font-weight: 700;
+        font-size: 52px;
+        margin-bottom: 55px;
+        text-transform: uppercase;
+        span {
+            background: linear-gradient(to top left, #7f1472 0%, #ff0066 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    &__logo-wb {
+        width: 390px;
+        height: 300px;
+        filter: drop-shadow(10px 20px 15px #090927);
+    }
+}
+.action {
+    position: relative;
+    @include flex-row();
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    &__button {
+        width: 250px;
+        height: 60px;
+        background: linear-gradient(to top left, #7f1472 0%, #ff0066 100%);
+        border-radius: 30px;
+        text-align: center;
+        line-height: 58px;
+        font-weight: 600;
+        font-size: 18px;
+        margin-right: 50px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+        color: $wh;
+        transition: all 0.4s;
+        &:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 1);
+        }
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        vertical-align: middle;
+        line-height: 23px;
+    }
+}
+.container {
+    &_main {
+        @include flex-row();
+        width: 1120px;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.golden-btn {
+    position: absolute;
+    top: 24px;
+    right: 45px;
+    width: 220px;
+    height: 50px;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,244,16,1) 100%);
+    border: 2px solid #89890d;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 44px;
+    font-weight: 400;
+    font-size: 18px;
+    margin-right: 50px;
+    box-shadow: 0 0 25px rgba(137, 137, 13, 0.9);
+    color: #000000;
+    transition: all 0.4s;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0 0 25px rgba(175, 175, 18, 0.9);
+    }
+}
+
+//Под iPhone 5,5s,SE ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 0px) and (max-width: 320px) {
+    .block-1 {
+        justify-content: flex-start;
+        height: 620px !important;
+        &__logo {
+            top: 20px;
+            left: 15px;
+            width: 60px;
+        }
+        &__content {
+            align-items: center;
+            text-align: center;
+        }
+        &__title-1 {
+            margin-bottom: 12px;
+        }
+        &__main-title {
+            margin-top: 12px;
+            font-size: 22px;
+        }
+        &__logo-wb {
+            width: 140px;
+            height: 105px;
+            margin-bottom: 20px;
+        }
+    }
+    .action {
+        @include flex-column();
+        margin-top: 64px;
+        height: 124px;
+        &__button {
+            width: 280px;
+            margin-right: 0;
+        }
+    }
+    .container {
+        &_main {
+            @include flex-column();
+            flex-direction: column-reverse;
+            width: 100%;
+            margin-top: 60px;
+        }
+    }
+    .golden-btn {
+        top: auto;
+        bottom: 220px;
+        right: 50%;
+        transform: translateX(68%);
+        width: 280px;
+        height: 60px;
+        text-align: center;
+        line-height: 58px;
+        z-index: 3;
+    }
+}
+
+//Под iPhone 6,7,8 ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .block-1 {
+        height: 700px !important;
+        justify-content: flex-start;
+        &__logo {
+            top: 20px;
+            left: 15px;
+            width: 60px;
+        }
+        &__content {
+            align-items: center;
+            text-align: center;
+        }
+        &__title-1 {
+            margin-bottom: 12px;
+        }
+        &__main-title {
+            margin-top: 12px;
+            font-size: 26px;
+        }
+        &__logo-wb {
+            width: 220px;
+            height: 170px;
+            margin-bottom: 20px;
+        }
+    }
+    .action {
+        @include flex-column();
+        margin-top: 64px;
+        height: 130px;
+        &__button {
+            width: 315px;
+            margin-right: 0;
+        }
+    }
+    .container {
+        &_main {
+            @include flex-column();
+            flex-direction: column-reverse;
+            width: 100%;
+            margin-top: 60px;
+        }
+    }
+    .golden-btn {
+        top: auto;
+        bottom: 220px;
+        right: 50%;
+        transform: translateX(66%);
+        width: 315px;
+        height: 60px;
+        text-align: center;
+        line-height: 58px;
+        z-index: 3;
+    }
+}
+
+//Под iPhone 6,7,8 plus ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 321px) and (max-width: 480px) and (min-height: 668px) and (max-height: 736px) {
+    .block-1 {
+        height: 750px !important;
+        &__logo {
+            top: 20px;
+            left: 15px;
+            width: 60px;
+        }
+        &__content {
+            align-items: center;
+            text-align: center;
+        }
+        &__main-title {
+            margin-top: 20px;
+            font-size: 26px;
+        }
+        &__logo-wb {
+            width: 220px;
+            height: 170px;
+            margin-bottom: 40px;
+        }
+    }
+    .action {
+        @include flex-column();
+        height: 130px;
+        margin-top: 80px;
+        &__button {
+            width: 315px;
+            margin-right: 0;
+        }
+    }
+    .container {
+        &_main {
+            @include flex-column();
+            flex-direction: column-reverse;
+            width: 100%;
+        }
+    }
+    .golden-btn {
+        top: auto;
+        bottom: 230px;
+        right: 50%;
+        transform: translateX(66%);
+        width: 315px;
+        height: 60px;
+        text-align: center;
+        line-height: 58px;
+        z-index: 3;
+    }
+}
+
+//Под iPhone X ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 321px) and (max-width: 480px) and (min-height: 737px) and (max-height: 812px) {
+    .block-1 {
+        height: 800px !important;
+        &__logo {
+            top: 20px;
+            left: 15px;
+            width: 60px;
+        }
+        &__content {
+            align-items: center;
+            text-align: center;
+        }
+        &__data {
+            font-size: 20px;
+        }
+        &__main-title {
+            margin-top: 20px;
+            font-size: 26px;
+        }
+        &__title-2 {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        &__logo-wb {
+            width: 220px;
+            height: 170px;
+            margin-bottom: 40px;
+        }
+    }
+    .action {
+        @include flex-column();
+        margin-top: 80px;
+        height: 130px;
+        &__button {
+            width: 315px;
+            margin-right: 0;
+        }
+    }
+    .container {
+        &_main {
+            @include flex-column();
+            flex-direction: column-reverse;
+            width: 100%;
+        }
+    }
+    .golden-btn {
+        top: auto;
+        bottom: 280px;
+        right: 50%;
+        transform: translateX(66%);
+        width: 315px;
+        height: 60px;
+        text-align: center;
+        line-height: 58px;
+        z-index: 3;
+    }
+}
+
+//Под iPad --------------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+//Под iPad Pro --------------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 1024px) and (max-width: 1360px) {
+}    

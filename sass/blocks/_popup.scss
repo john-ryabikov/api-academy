@@ -1,0 +1,317 @@
+.modal-overlay {
+    display: none;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+    background-color:rgba(0,0,0,0.9);
+    //display: block;
+    z-index: 5;
+    &__window {
+        position: absolute;
+        top: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        z-index: 6;
+        transition: all 0.6s;
+    }
+    &__close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: $wh;
+        font-size: 30px;
+        cursor: pointer;
+        transition: all 0.4s;
+        &:hover {
+            color:#ff0066;
+        }
+    }
+    &__rule {
+        position: absolute;
+        bottom: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 300px;
+        font-size: 12px;
+        font-weight: 300;
+        color: #4b4b4b;
+        margin-top: 22px;
+    }
+}
+.web-form {
+    @include flex-column();
+    width: 540px;
+    height: 650px;
+    background-color: $wh;
+    z-index: 6;
+    padding: 35px;
+    color: #000000;
+    border-radius: 5px;
+    &__window-h {
+        font-size: 24px;
+        line-height: 1.35;
+        font-weight: 600;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+    &__window-cont {
+        @include flex-column();
+    }
+    &__inputs-box {
+        @include flex-column();
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    &__label {
+        font-size: 16px;
+        text-align: start;
+        padding-bottom: 5px;
+        font-weight: 300;
+    }
+    &__input {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        border: 1px solid #000000;
+        padding: 0 15px 0 15px;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &_text {
+            resize: none;
+            padding-top: 15px;
+        }
+    }
+    &__btn {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        margin-top: 30px;
+        border: none;
+        background: linear-gradient(to top left, #000099 0%, #ff0066 100%);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+        color: $wh;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.4s;
+        &:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 1);
+        }
+    }
+    &__link-rule {
+        text-decoration: underline;
+        transition: all 0.4s;
+        &:hover {
+            color: #000000;
+        }
+    }
+}
+.show-modal {
+    top: 0;
+}
+
+//Под iPhone 5,5s,SE ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 0px) and (max-width: 320px) {
+    .modal-overlay {
+        &__close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: $wh;
+            font-size: 30px;
+            cursor: pointer;
+            transition: all 0.4s;
+            &:hover {
+                color:#ff0066;
+            }
+        }
+        &__close {
+            top: 10px;
+            right: 10px;
+            font-size: 22px;
+        }
+        &__rule {
+            bottom: 18px;
+            width: 260px;
+        }
+    }
+    .web-form {
+        width: 280px;
+        height: 480px;
+        padding: 15px;
+        &__window-h {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        &__label {
+            font-size: 12px;
+        }
+        &__input {
+            height: 40px;
+            padding: 0 15px 0 15px;
+            margin-bottom: 10px;
+        }
+        &__btn {
+            height: 50px;
+            margin-top: 20px;
+        }
+    }
+}
+
+//Под iPhone 6,7,8 ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .modal-overlay {
+        &__close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: $wh;
+            font-size: 30px;
+            cursor: pointer;
+            transition: all 0.4s;
+            &:hover {
+                color:#ff0066;
+            }
+        }
+        &__close {
+            top: 10px;
+            right: 10px;
+            font-size: 22px;
+        }
+        &__rule {
+            bottom: 18px;
+            width: 260px;
+        }
+    }
+    .web-form {
+        width: 315px;
+        height: 520px;
+        padding: 20px;
+        &__window-h {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        &__label {
+            font-size: 12px;
+        }
+        &__input {
+            height: 40px;
+            padding: 0 15px 0 15px;
+            margin-bottom: 14px;
+        }
+        &__btn {
+            height: 50px;
+            margin-top: 30px;
+        }
+    }
+}
+
+//Под iPhone 6,7,8 plus ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 321px) and (max-width: 480px) and (min-height: 668px) and (max-height: 736px) {
+    .modal-overlay {
+        &__close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: $wh;
+            font-size: 30px;
+            cursor: pointer;
+            transition: all 0.4s;
+            &:hover {
+                color:#ff0066;
+            }
+        }
+        &__close {
+            top: 10px;
+            right: 10px;
+            font-size: 22px;
+        }
+        &__rule {
+            bottom: 18px;
+            width: 260px;
+        }
+    }
+    .web-form {
+        width: 325px;
+        height: 560px;
+        padding: 25px;
+        margin-top: -100px;
+        &__window-h {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        &__label {
+            font-size: 12px;
+        }
+        &__input {
+            height: 50px;
+            padding: 0 15px 0 15px;
+            margin-bottom: 14px;
+        }
+        &__btn {
+            height: 50px;
+            margin-top: 30px;
+        }
+    }
+}
+
+//Под iPhone X ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 321px) and (max-width: 480px) and (min-height: 737px) and (max-height: 812px) {
+    .modal-overlay {
+        &__close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: $wh;
+            font-size: 30px;
+            cursor: pointer;
+            transition: all 0.4s;
+            &:hover {
+                color:#ff0066;
+            }
+        }
+        &__close {
+            top: 10px;
+            right: 10px;
+            font-size: 22px;
+        }
+        &__rule {
+            bottom: 18px;
+            width: 260px;
+        }
+    }
+    .web-form {
+        width: 325px;
+        height: 560px;
+        padding: 25px;
+        margin-top: -100px;
+        &__window-h {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        &__label {
+            font-size: 12px;
+        }
+        &__input {
+            height: 50px;
+            padding: 0 15px 0 15px;
+            margin-bottom: 14px;
+        }
+        &__btn {
+            height: 50px;
+            margin-top: 30px;
+        }
+    }
+}    

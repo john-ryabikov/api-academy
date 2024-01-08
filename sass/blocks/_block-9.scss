@@ -1,0 +1,198 @@
+.block-9 {
+    @include flex-column();
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    &__content {
+        @include flex-column();
+        align-items: center;
+    }
+    &__title {
+        font-size: 60px;
+        line-height: 1.15;
+        font-weight: 700;
+        span {
+            background: linear-gradient(to top left, #7f1472 0%, #ff0066 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        text-align: center;
+    }
+    &__spoilers-box {
+        @include flex-column();
+        align-items: center;
+        width: 760px;
+        margin-top: 40px;
+    }
+}
+.spoiler {
+    @include flex-column();
+    align-items: center;
+    width: 100%;
+    &__question-box {
+        @include flex-row();
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        cursor: pointer;
+        border-top: 1px solid $dg;
+        padding: 20px 0 20px 0;
+    }
+    &__question {
+        font-size: 24px;
+        line-height: 1.35;
+        font-weight: 600;
+    }
+    &__button {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        text-align: center;
+        color: $wh;
+        background-color: $secn;
+        line-height: 41px;
+        border-radius: 30px;
+        transition: all 0.4s;
+    }
+    &__answer {
+        display: none;
+        width: 100%;
+        text-align: start;
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
+    &__answer-text {
+        line-height: 1.55;
+        font-weight: 300;
+    }
+    &:last-child {
+        border-bottom: 1px solid $dg;
+    }
+}
+.spoiler-active {
+    transform: rotate(-45deg);
+}
+
+//Под iPhone 5,5s,SE ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 0px) and (max-width: 320px) {
+    .block-9 {
+        padding-top: 40px;
+        &__title {
+            font-size: 32px;
+        }
+        &__spoilers-box {
+            width: 100%;
+        }
+    }
+    .spoiler {
+        &__question {
+            width: 230px;
+            font-size: 16px;
+        }
+        &__button {
+            font-size: 20px;
+        }
+        &__answer {
+            font-size: 14px;
+        }
+        &__answer-text {
+            line-height: 1.35;
+        }
+    }
+}
+
+//Под iPhone 6,7,8 ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .block-9 {
+        padding-top: 40px;
+        &__title {
+            font-size: 32px;
+        }
+        &__spoilers-box {
+            width: 100%;
+        }
+    }
+    .spoiler {
+        &__question {
+            width: 230px;
+            font-size: 16px;
+        }
+        &__button {
+            font-size: 20px;
+        }
+        &__answer {
+            font-size: 14px;
+        }
+        &__answer-text {
+            line-height: 1.35;
+        }
+    }
+}
+
+//Под iPhone 6,7,8 plus ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 321px) and (max-width: 480px) and (min-height: 668px) and (max-height: 736px) {
+    .block-9 {
+        padding-top: 40px;
+        &__title {
+            font-size: 32px;
+        }
+        &__spoilers-box {
+            width: 100%;
+        }
+    }
+    .spoiler {
+        &__question {
+            width: 230px;
+            font-size: 16px;
+        }
+        &__button {
+            font-size: 20px;
+        }
+        &__answer {
+            font-size: 14px;
+        }
+        &__answer-text {
+            line-height: 1.35;
+        }
+    }
+}
+
+//Под iPhone X ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 321px) and (max-width: 480px) and (min-height: 737px) and (max-height: 812px) {
+    .block-9 {
+        padding-top: 40px;
+        &__title {
+            font-size: 32px;
+        }
+        &__spoilers-box {
+            width: 100%;
+        }
+    }
+    .spoiler {
+        &__question {
+            width: 230px;
+            font-size: 16px;
+        }
+        &__button {
+            font-size: 20px;
+        }
+        &__answer {
+            font-size: 14px;
+        }
+        &__answer-text {
+            line-height: 1.35;
+        }
+    }
+}
+
+//Под iPad --------------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+//Под iPad Pro --------------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 1024px) and (max-width: 1360px) {
+}  

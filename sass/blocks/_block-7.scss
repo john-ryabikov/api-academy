@@ -1,0 +1,456 @@
+.block-7 {
+    @include flex-column();
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding-top: 140px;
+    padding-bottom: 50px;
+    &__content {
+        @include flex-column();
+        align-items: center;
+    }
+    &__subtitle {
+        font-size: 60px;
+        line-height: 1.55;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__course-box {
+        padding: 40px 35px 40px 35px;
+        margin-top: 40px;
+    }
+}
+.course-box {
+    @include flex-row();
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    border: 1px solid #ff0066;
+    background-color: #1f1b26;
+    border-radius: 40px;
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.2);
+    &__price-box {
+        width: 445px;
+        padding: 40px 26px 40px 26px;
+    }
+}
+.price-box {
+    @include flex-column();
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $wh;
+    border-radius: 50px;
+    color: #000000;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+    &__title {
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+    &__subtitle {
+        font-size: 34px;
+        line-height: 1.15;
+        font-weight: 400;
+        text-align: center;
+        background: linear-gradient(to top left, #7f1472 0%, #ff0066 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &__list-box {
+        @include flex-column();
+        align-items: center;
+        justify-content: space-around;
+        width: 360px;
+        height: auto;
+        padding: 10px 5px 10px 5px;
+        border: 1px solid $hvr;
+        border-radius: 30px;
+        margin-top: 28px;
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+        line-height: 1.75;
+    }
+    &__list-stroke {
+        width: 80%;
+        font-size: 16px;
+        font-weight: 300;
+        list-style: disc !important;
+        margin-left: 50px;
+    }
+    &__stroke-air {
+        display: block;
+        width: 80%;
+        height: 56px;
+    }
+    &__new-price {
+        color: #2a016d;
+        font-size: 60px;
+        line-height: 1.55;
+        font-weight: 400;
+        margin-top: 10px;
+        letter-spacing: -2px;
+    }
+    &__buttons {
+        @include flex-column();
+        align-items: center;
+        width: auto;
+    }
+    &__button {
+        width: 250px !important;
+        height: 60px;
+        background: linear-gradient(to top left, #7f1472 0%, #ff0066 100%);
+        border: none;
+        border-radius: 30px !important;
+        text-align: center;
+        font-weight: 700 !important;
+        font-size: 16px !important;
+        line-height: 24px !important;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+        color: $wh !important;
+        margin-top: 14px;
+        transition: all 0.4s;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 1);
+        }
+        &:first-child {
+            width: 250px !important;
+        }
+    }
+    &__buttons-or {
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 14px;
+    }
+    &__credit {
+        width: 220px;
+        text-align: center;
+        font-size: 12px;
+        color: #666666;
+        margin-top: 16px;
+        b {
+            color: #000000;
+        }
+    }
+}
+
+//Под iPhone 5,5s,SE ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 0px) and (max-width: 320px) {
+    .block-7 {
+        padding-top: 80px;
+        &__content {
+            @include flex-column();
+            align-items: center;
+        }
+        &__subtitle {
+            font-size: 28px;
+            margin-top: 20px;
+        }
+        &__course-box {
+            padding: 50px 15px 50px 15px;
+            margin-top: 40px;
+        }
+    }
+    .course-box {
+        @include flex-column();
+        justify-content: center;
+        width: 100%;
+        &__price-box {
+            width: 100%;
+            padding: 30px 15px 30px 15px;
+        }
+    }
+    .price-box {
+        border-radius: 30px;
+        margin-bottom: 60px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &__subtitle {
+            &--h1 {
+                font-size: 20px;
+            }
+        }
+        &__list-box {
+            width: 100%;
+            height: auto;
+            padding: 10px 5px 10px 5px;
+            border: 1px solid $hvr;
+            border-radius: 30px;
+            margin-top: 30px;
+        }
+        &__list {
+            line-height: 1.35;
+        }
+        &__list-stroke {
+            width: 80%;
+            margin-left: 30px;
+            margin-bottom: 10px;
+        }
+        &__stroke-air {
+            display: none;
+        }
+        &__new-price {
+            font-size: 40px;
+        }
+        &__button {
+            width: 230px !important;
+        }
+        &__buttons-or {
+            font-size: 12px;
+            font-weight: 400;
+            margin-top: 14px;
+        }
+        &__credit {
+            width: 220px;
+            text-align: center;
+        }
+    }
+}
+
+//Под iPhone 6,7,8 ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .block-7 {
+        padding-top: 80px;
+        &__content {
+            @include flex-column();
+            align-items: center;
+        }
+        &__subtitle {
+            font-size: 28px;
+            margin-top: 20px;
+        }
+        &__course-box {
+            padding: 30px 15px 30px 15px;
+            margin-top: 40px;
+        }
+    }
+    .course-box {
+        @include flex-column();
+        justify-content: center;
+        width: 110%;
+        &__price-box {
+            width: 100%;
+            padding: 40px 25px 40px 25px;
+        }
+    }
+    .price-box {
+        border-radius: 30px;
+        margin-bottom: 60px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &__subtitle {
+            &--h1 {
+                font-size: 20px;
+            }
+        }
+        &__title {
+            font-size: 12px;
+        }
+        &__list-box {
+            width: 100%;
+            height: auto;
+            padding: 10px 5px 10px 5px;
+            border: 1px solid $hvr;
+            border-radius: 30px;
+            margin-top: 30px;
+        }
+        &__list {
+            line-height: 1.35;
+        }
+        &__list-stroke {
+            width: 80%;
+            margin-left: 30px;
+            margin-bottom: 10px;
+        }
+        &__stroke-air {
+            display: none;
+        }
+        &__new-price {
+            font-size: 40px;
+        }
+        &__button {
+            width: 260px !important;
+        }
+        &__buttons-or {
+            font-size: 12px;
+            font-weight: 400;
+            margin-top: 14px;
+        }
+        &__credit {
+            width: 220px;
+            text-align: center;
+        }
+    }
+}
+
+//Под iPhone 6,7,8 plus ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 321px) and (max-width: 480px) and (min-height: 668px) and (max-height: 736px) {
+    .block-7 {
+        padding-top: 80px;
+        &__content {
+            @include flex-column();
+            align-items: center;
+        }
+        &__subtitle {
+            font-size: 28px;
+            margin-top: 20px;
+        }
+        &__course-box {
+            padding: 30px 15px 30px 15px;
+            margin-top: 40px;
+        }
+    }
+    .course-box {
+        @include flex-column();
+        align-items: center;
+        justify-content: center;
+        width: 120%;
+        &__price-box {
+            width: 100%;
+            padding: 40px 25px 40px 25px;
+        }
+    }
+    .price-box {
+        width: 95%;
+        border-radius: 30px;
+        margin-bottom: 60px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &__subtitle {
+            &--h1 {
+                font-size: 24px;
+            }
+        }
+        &__title {
+            font-size: 12px;
+        }
+        &__list-box {
+            width: 100%;
+            height: auto;
+            padding: 10px 5px 10px 5px;
+            border: 1px solid $hvr;
+            border-radius: 30px;
+            margin-top: 30px;
+        }
+        &__list {
+            line-height: 1.35;
+        }
+        &__list-stroke {
+            width: 80%;
+            margin-left: 30px;
+            margin-bottom: 10px;
+        }
+        &__stroke-air {
+            display: none;
+        }
+        &__new-price {
+            font-size: 40px;
+        }
+        &__button {
+            width: 280px !important;
+        }
+        &__buttons-or {
+            font-size: 12px;
+            font-weight: 400;
+            margin-top: 14px;
+        }
+        &__credit {
+            width: 220px;
+            text-align: center;
+        }
+    }
+}
+
+//Под iPhone X ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 321px) and (max-width: 480px) and (min-height: 737px) and (max-height: 812px) {
+    .block-7 {
+        padding-top: 80px;
+        &__content {
+            @include flex-column();
+            align-items: center;
+        }
+        &__subtitle {
+            font-size: 28px;
+            margin-top: 20px;
+        }
+        &__course-box {
+            padding: 30px 15px 30px 15px;
+            margin-top: 40px;
+        }
+    }
+    .course-box {
+        @include flex-column();
+        align-items: center;
+        justify-content: center;
+        width: 120%;
+        &__price-box {
+            width: 100%;
+            padding: 40px 25px 40px 25px;
+        }
+    }
+    .price-box {
+        width: 95%;
+        border-radius: 30px;
+        margin-bottom: 60px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &__subtitle {
+            &--h1 {
+                font-size: 24px;
+            }
+        }
+        &__title {
+            font-size: 12px;
+        }
+        &__list-box {
+            width: 100%;
+            height: auto;
+            padding: 10px 5px 10px 5px;
+            border: 1px solid $hvr;
+            border-radius: 30px;
+            margin-top: 30px;
+        }
+        &__list {
+            line-height: 1.35;
+        }
+        &__list-stroke {
+            width: 80%;
+            margin-left: 30px;
+            margin-bottom: 10px;
+        }
+        &__stroke-air {
+            display: none;
+        }
+        &__new-price {
+            font-size: 40px;
+        }
+        &__button {
+            width: 280px !important;
+        }
+        &__buttons-or {
+            font-size: 12px;
+            font-weight: 400;
+            margin-top: 14px;
+        }
+        &__credit {
+            width: 220px;
+            text-align: center;
+        }
+    }
+}
+
+//Под iPad --------------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+//Под iPad Pro --------------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 1024px) and (max-width: 1360px) {
+}  

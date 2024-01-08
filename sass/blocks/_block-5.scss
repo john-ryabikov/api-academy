@@ -1,0 +1,414 @@
+.block-5 {
+    @include flex-column();
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    &__content {
+        @include flex-column();
+        align-items: center;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 60px;
+        span {
+            background: linear-gradient(to top left, #7f1472 0%, #ff0066 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    &__text-box {
+        @include flex-column();
+        width: 650px;
+        height: auto;
+        align-items: center;
+        border: 1px solid $secn;
+        border-radius: 50px;
+        padding: 24px 40px 24px 40px;
+        margin-top: 40px;
+    }
+    &__text-1 {
+        font-size: 24px;
+        line-height: 1.55;
+        font-weight: 400;
+        text-align: center;
+    }
+    &__text-2 {
+        font-size: 18px;
+        line-height: 1.1;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 8px;
+        color: #868686;
+    }
+    &__progs {
+        @include flex-column();
+        width: 100%;
+        height: auto;
+        align-items: center;
+        margin-top: 40px;
+    }
+    &__progs-row {
+        @include flex-row();
+        width: 920px;
+        height: auto;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    &__button {
+        width: 250px;
+        height: 60px;
+        background: linear-gradient(to top left, #7f1472 0%, #ff0066 100%);
+        border-radius: 30px;
+        text-align: center;
+        line-height: 58px;
+        font-weight: 600;
+        font-size: 18px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+        color: $wh;
+        margin-top: 80px;
+        transition: all 0.4s;
+        &:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 1);
+        }
+    }
+}
+.prog-box {
+    @include flex-row();
+    align-items: center;
+    justify-content: space-around;
+    width: 445px;
+    height: 140px;
+    border-radius: 30px;
+    background-color: #1f1b26;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+    &__icon {
+        width: 100px;
+        height: 100px;
+    }
+    &__text {
+        @include flex-column();
+        align-items: flex-start;
+        width: 280px;
+        color: $wh;
+    }
+    &__subtitle {
+        font-size: 16px;
+        line-height: 1.55;
+        font-weight: 400;
+        color: #868686;
+    }
+    &__title {
+        font-size: 22px;
+        line-height: 1.15;
+        font-weight: 600;
+    }
+}
+
+//Под iPhone 5,5s,SE ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 0px) and (max-width: 320px) {
+    .block-5 {
+        padding-top: 70px;
+        &__title {
+            font-size: 28px;
+            text-align: center;
+        }
+        &__text-box {
+            width: 100%;
+            height: auto;
+            @include flex-column();
+            align-items: center;
+            border: 1px solid $secn;
+            border-radius: 50px;
+            padding: 24px 40px 24px 40px;
+            margin-top: 30px;
+        }
+        &__text-1 {
+            width: 120%;
+            font-size: 18px;
+            line-height: 1.25;
+            margin-bottom: 25px;
+        }
+        &__text-2 {
+            width: 100%;
+            font-size: 14px;
+        }
+        &__progs {
+            width: 100%;
+            height: auto;
+            @include flex-column();
+            align-items: center;
+            margin-top: 20px;
+        }
+        &__progs-row {
+            width: 100%;
+            @include flex-column();
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        &__button {
+            width: 280px;
+        }
+    }
+    .prog-box {
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &__icon {
+            width: 60px;
+            height: 60px;
+            margin-left: 18px;
+        }
+        &__text {
+            @include flex-column();
+            align-items: flex-start;
+            width: 280px;
+            margin-left: 10px;
+        }
+        &__subtitle {
+            font-size: 14px;
+        }
+        &__title {
+            font-size: 18px;
+            line-height: 1.25;
+        }
+    }
+}
+
+//Под iPhone 6,7,8 ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .block-5 {
+        padding-top: 70px;
+        &__title {
+            font-size: 28px;
+            text-align: center;
+        }
+        &__text-box {
+            width: 100%;
+            height: auto;
+            @include flex-column();
+            align-items: center;
+            border: 1px solid $secn;
+            border-radius: 50px;
+            padding: 24px 40px 24px 40px;
+            margin-top: 30px;
+        }
+        &__text-1 {
+            width: 100%;
+            font-size: 18px;
+            line-height: 1.25;
+            margin-bottom: 25px;
+        }
+        &__text-2 {
+            width: 100%;
+            font-size: 14px;
+            line-height: 1.25;
+        }
+        &__progs {
+            width: 100%;
+            height: auto;
+            @include flex-column();
+            align-items: center;
+            margin-top: 20px;
+        }
+        &__progs-row {
+            width: 100%;
+            @include flex-column();
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        &__button {
+            width: 315px;
+        }
+    }
+    .prog-box {
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &__icon {
+            width: 60px;
+            height: 60px;
+            margin-left: 18px;
+        }
+        &__text {
+            @include flex-column();
+            align-items: flex-start;
+            width: 280px;
+            margin-left: 10px;
+        }
+        &__subtitle {
+            font-size: 14px;
+        }
+        &__title {
+            font-size: 20px;
+            line-height: 1.25;
+        }
+    }
+}
+
+//Под iPhone 6,7,8 plus ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 321px) and (max-width: 480px) and (min-height: 668px) and (max-height: 736px) {
+    .block-5 {
+        padding-top: 70px;
+        &__title {
+            font-size: 36px;
+            text-align: center;
+        }
+        &__text-box {
+            width: 100%;
+            height: auto;
+            @include flex-column();
+            align-items: center;
+            border: 1px solid $secn;
+            border-radius: 50px;
+            padding: 24px 40px 24px 40px;
+            margin-top: 30px;
+        }
+        &__text-1 {
+            width: 120%;
+            font-size: 22px;
+            line-height: 1.25;
+            margin-bottom: 25px;
+        }
+        &__text-2 {
+            width: 100%;
+            font-size: 14px;
+        }
+        &__progs {
+            width: 100%;
+            height: auto;
+            @include flex-column();
+            align-items: center;
+            margin-top: 20px;
+        }
+        &__progs-row {
+            width: 100%;
+            @include flex-column();
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        &__button {
+            width: 315px;
+        }
+    }
+    .prog-box {
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &__icon {
+            width: 60px;
+            height: 60px;
+            margin-left: 18px;
+        }
+        &__text {
+            @include flex-column();
+            align-items: flex-start;
+            width: 280px;
+            margin-left: 10px;
+        }
+        &__subtitle {
+            font-size: 14px;
+        }
+        &__title {
+            font-size: 20px;
+            line-height: 1.25;
+        }
+    }
+}
+
+//Под iPhone X ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 321px) and (max-width: 480px) and (min-height: 737px) and (max-height: 812px) {
+    .block-5 {
+        padding-top: 70px;
+        &__title {
+            font-size: 36px;
+            text-align: center;
+        }
+        &__text-box {
+            width: 100%;
+            height: auto;
+            @include flex-column();
+            align-items: center;
+            border: 1px solid $secn;
+            border-radius: 50px;
+            padding: 24px 40px 24px 40px;
+            margin-top: 30px;
+        }
+        &__text-1 {
+            width: 120%;
+            font-size: 18px;
+            line-height: 1.25;
+            margin-bottom: 25px;
+        }
+        &__text-2 {
+            width: 100%;
+            font-size: 14px;
+        }
+        &__progs {
+            width: 100%;
+            height: auto;
+            @include flex-column();
+            align-items: center;
+            margin-top: 20px;
+        }
+        &__progs-row {
+            width: 100%;
+            @include flex-column();
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        &__button {
+            width: 315px;
+        }
+    }
+    .prog-box {
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &__icon {
+            width: 60px;
+            height: 60px;
+            margin-left: 18px;
+        }
+        &__text {
+            @include flex-column();
+            align-items: flex-start;
+            width: 280px;
+            margin-left: 10px;
+        }
+        &__subtitle {
+            font-size: 14px;
+        }
+        &__title {
+            font-size: 20px;
+            line-height: 1.25;
+        }
+    }
+}
+
+//Под iPad --------------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+//Под iPad Pro --------------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 1024px) and (max-width: 1360px) {
+}  
